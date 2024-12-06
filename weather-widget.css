@@ -1,0 +1,58 @@
+:host {
+    display: block;
+    font-family: Arial, sans-serif;
+    --bg-color: #FFFFFF;
+    --text-color: #333;
+    --font-size: 18px;
+    --title-color: #339933;
+    --accent-color: #555;
+    --border-color: #339933;
+    --shadow-color: #3aaa3a;
+    --shadow-hover: #3aaa3a;
+}
+.weather-widget {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px var(--shadow-color);
+    width: 300px;
+    text-align: center;
+    font-size: var(--font-size);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    margin: auto;
+    display: block;
+}
+.weather-widget h2 {
+    color: var(--title-color);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.weather-widget .temp {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--title-color);
+}
+.weather-widget .humidity,
+.weather-widget .precipitation,
+.weather-widget .condition {
+    font-style: italic;
+    margin-top: 10px;
+    color: var(--accent-color);
+}
+.weather-widget .comment {
+    margin-top: 20px;
+    color: var(--text-color);
+}
+.weather-widget .emoji {
+    font-size: 48px;
+    margin: 20px;
+}
+.weather-widget::before {
+    content: "🌡️";
+    font-size: 36px;
+}
+.weather-widget:hover {
+    box-shadow: 0 0 20px var(--shadow-hover);
+    transition: all 0.3s ease;
+}
